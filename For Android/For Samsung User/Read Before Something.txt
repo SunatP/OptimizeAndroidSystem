@@ -1,5 +1,5 @@
 If you use Samsung Galaxy Note 4 (SM-N910C) And you want to root First You must to flash TWRP by using Odin On my GitHub
-Note *Not Recommend if you not courage to edit your Mobile Phone Just Skip And I don't care if Your Phone Brick , Dead , Self-Destruct , Bomb etc.* 
+Note *Not Recommend if you not courage to edit your Mobile Phone Just Skip This And I don't care if Your Phone Brick , Dead , Self-Destruct , Bomb etc.* 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------- Your Phone will not Warranty --------------------------------------------------------
 ROOT BY SUPERSU VIA (Flash Kernel into SYSTEM ----> Boot.img)
