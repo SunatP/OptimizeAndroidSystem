@@ -20,4 +20,3 @@
 					 A53 Min-Max = 400 - 1000 MHz (Default From Kernel is 400 - 1300 MHz)
 					 A57 Min-Max = 400 - 1000 MHz (Default From Kernel is 700 - 1300 MHz and Offline 2 Cores)
 
-Alt-H1
