@@ -5,9 +5,13 @@ This is my Record by Tune Kernel And Optimize System with a little Tweak (Change
 ## While use **HV Charging**(High Voltage 9V 1.67A) Peak Current = 1037 mA 
 				            Input Current = 1021 mA
 
+Alt-H2
 -----------------------------------------------------------------------------------------------
 
-### Temperature while Charge(Degree Celsius) Max = 43 C Temp of A53 = 38 - 46 C Temp of A57 = 40 - 48 C
+### Temperature of Battery while Charge(Degree Celsius) 
+					 Max = 43 C 
+					 Temp of CPU A53 = 38 - 46 C 
+					 Temp of CPU A57 = 40 - 48 C
 					 Average = 36 C
 					 Min = 33 C
 
