@@ -19,3 +19,5 @@
 ### CPU Frequency (4+4 Cores with **ARM-Cortex A53 4 Cores**(little CPU) and **ARM-Cortex A57 4 Cores**(BIG CPU)) Use Governor **"Bioshock"** 
 					 A53 Min-Max = 400 - 1000 MHz (Default From Kernel is 400 - 1300 MHz)
 					 A57 Min-Max = 400 - 1000 MHz (Default From Kernel is 700 - 1300 MHz and Offline 2 Cores)
+
+Alt-H1
