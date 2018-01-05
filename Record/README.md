@@ -1,5 +1,6 @@
 ﻿# Record HV(High Voltage) Charging
-This is my Record by Tune Kernel And Optimize System with a little Tweak (Change CPU Governors , Offline 2 Core of CPU Arm-Cortex A57(Big-Core), Downclock CPU&GPU)
+Alt-H1
+## This is my Record by Tune Kernel And Optimize System with a little Tweak (Change CPU Governors , Offline 2 Core of CPU Arm-Cortex A57(Big-Core), Downclock CPU&GPU)
 Alt-H1
 
 ## While use **HV Charging**(High Voltage 9V 1.67A) Peak Current = 1037 mA 
