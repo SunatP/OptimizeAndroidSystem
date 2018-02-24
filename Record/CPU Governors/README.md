@@ -81,6 +81,7 @@ PERFORMANCE : GOOD, BATTERY LIFE : GREAT, COMPATIBILITY : GOOD
 Description:
 CPU governor developed by Jamison904. A mix of ConservativeX and Lionheart
 
+
 ### Performance
 
 Summary:
