@@ -83,6 +83,7 @@ fi
 
 echo " " >> /system/build.prop
 echo "# ViPER Fix By androidexpert35" >> /system/build.prop
+echo "# ViPER Fix Test By Sunat.P" >> /system/build.prop
 echo " " >> /system/build.prop
 echo "audio.deep_buffer.media=false" >> /system/build.prop
 echo "ro.ril.enable.amr.wideband=1" >> /system/build.prop
