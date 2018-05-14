@@ -2,3 +2,6 @@ title: [This is My GitHub To Improve System Stability On Android System]
 description: [Improve Android System]
 theme: jekyll-theme-minimal
 remote_theme: jekyll-theme-slate
+logo: [image/SNP.png]
+show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
