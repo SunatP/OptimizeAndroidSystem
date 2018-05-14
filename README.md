@@ -3,4 +3,4 @@ This is my test for Stable system on android by optimize everything that i can f
 -----------------------------------------------------------------------------------------------
 ทำให้ระบบแอนดรอย์เกิดความเสถียรโดยใช้แอพที่มีสิทธิ์เข้าถึง Root(Permission Require) เราจะพยายามทำให้ระบบเสถียรที่สุดโดยไม่แก้ไขระบบหรือที่เรียกว่า Systemless	
 
-                                  ![GitHub Logo](image/SNP.png)
+![GitHub Logo](image/SNP.png)
