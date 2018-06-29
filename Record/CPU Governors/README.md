@@ -1,4 +1,4 @@
-﻿# CPU Govornors (on Note 4 with custom Kernel)
+﻿# CPU Governors (on Note 4 with custom Kernel)
 
 ## This is my Record by Custom kernel 
 
