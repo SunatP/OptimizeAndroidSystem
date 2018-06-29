@@ -1,0 +1,39 @@
+# This file will be read by resetprop
+# Example: Change dpi
+# ro.sf.lcd_density=320
+
+#debug.composition.type=gpu
+debug.composition.type=gpu
+debug.composition.type=c2d
+debug.egl.hw=1
+debug.egl.profiler=1
+debug.enabletr=true
+debug.overlayui.enable=1
+debug.performance.tuning=1
+
+#Render UI with GPU
+debug.sf.hw=1
+
+dev.pm.dyn_samplingrate=1
+hw3d.force=1
+hwui.disable_vsync=true
+hwui.render_dirty_regions=false
+persist.sys.composition.type=c2d
+persist.sys.composition.type=gpu
+persist.sys.ui.hw=1
+ro.config.enable.hw_accel=true
+ro.product.gpu.driver=1
+ro.fb.mode=1
+#ro.vold.umsdirtyratio=20 default
+ro.vold.umsdirtyratio=50
+ro.sf.compbypass.enable=0
+video.accelerate.hw=1
+
+# Improve overall media quality
+ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.dec.aud.wma.enabled=1
+ro.media.dec.vid.wmv.enabled=1
+ro.media.cam.preview.fps=0
+ro.media.codec_priority_for_thumb=so
