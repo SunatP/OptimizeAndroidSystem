@@ -26,8 +26,8 @@
 	CP : N910CXXU1DQH1
 	Security Patch : 1 August G , 2017
 	SE Status for Android : Enable (Permissive)
-	Magisk Version 	   : v15.3
-	Kernel				   : Custom Kernel 
-	Root				   : Already
-	Knox Count Warranty   : 1 (Tripped)
+	Magisk Version : v16.0
+	Kernel : Custom Kernel 
+	Root : Already
+	Knox Count Warranty : 1 (Tripped)
 ```
