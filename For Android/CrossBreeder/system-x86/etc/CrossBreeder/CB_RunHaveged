@@ -1,0 +1,66 @@
+#!/system/bin/sh
+
+if [ "$(getprop persist.crossbreeder.rdm)" = "1" ]; then
+
+RANDOMDEVICE=urandom
+if [ -c /dev/erandom ]; then
+  if [ ! -f /dev/urandom.MOD ]; then
+    touch /dev/urandom.MOD
+    busybox mv /dev/urandom /dev/urandom.ORIG
+    busybox ln /dev/erandom /dev/urandom
+    sleep 2
+  fi
+  busybox chmod 666 /dev/frandom
+  busybox chmod 666 /dev/erandom
+  RANDOMDEVICE=frandom
+fi
+
+URANDOMDEVICE="/dev/urandom"
+if [ -c /dev/erandom ]; then
+  if [ ! -f /dev/urandom.MOD ]; then 
+    touch /dev/urandom.MOD
+    busybox mv /dev/urandom /dev/urandom.ORIG
+    busybox ln /dev/erandom /dev/urandom
+    sleep 2
+  fi
+  busybox chmod 666 /dev/frandom
+  busybox chmod 666 /dev/erandom
+  RANDOMDEVICE=frandom
+  if [ ! -c /dev/urandom.ORIG ]; then 
+    busybox mknod -m 666 /dev/urandom.ORIG c 1 9
+    sleep 2
+  fi
+  URANDOMDEVICE="/dev/urandom.ORIG"
+elif [ ! -c /dev/urandom ]; then
+  busybox mknod -m 666 /dev/urandom c 1 9
+  sleep 2
+fi
+
+if [ ! -f /dev/random.MOD ]; then  
+  touch /dev/random.MOD
+  busybox rm /dev/random
+  busybox ln /dev/$RANDOMDEVICE /dev/random
+  sleep 2
+fi
+
+for i in `busybox find /sys -name add_random -print 2>/dev/null`; do busybox echo 0 > $i; done
+
+fi
+
+if [ "$(getprop persist.crossbreeder.rdm)" = "1" ]|[ "$(getprop persist.crossbreeder.ent)" = "1" ]; then
+
+POOLSIZE="$(busybox cat /proc/sys/kernel/random/poolsize 2>/dev/null)"
+
+busybox sysctl -w kernel.random.read_wakeup_threshold=8;
+
+if [ "$(busybox cat /proc/sys/kernel/random/write_wakeup_threshold 2>/dev/null)" != "${POOLSIZE}" ]; then 
+   busybox sysctl -w kernel.random.write_wakeup_threshold="${POOLSIZE}";
+fi
+
+sys_pid=`busybox pgrep system_server 2>/dev/null`
+
+busybox renice -10 $sys_pid 2>/dev/null
+
+touch /dev/CB_RunHaveged.RUN
+
+fi

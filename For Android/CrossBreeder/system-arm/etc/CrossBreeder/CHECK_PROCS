@@ -1,0 +1,61 @@
+#!/system/bin/sh 
+echo "" >> /cache/crossbreeder.log
+echo "CrossBreeder Lite Version 2.1.1" >> /cache/crossbreeder.log
+echo "" >> /cache/crossbreeder.log
+echo $(date) >> /cache/crossbreeder.log
+echo "" >> /cache/crossbreeder.log
+echo "Checking device info..." >> /cache/crossbreeder.log
+echo "" >> /cache/crossbreeder.log
+getprop | busybox egrep -i "build|product" >> /cache/crossbreeder.log
+echo "" >> /cache/crossbreeder.log
+
+if [ "$(getprop persist.crossbreeder.rdm)" = "1" ]; then
+
+while [ ! -f /dev/random.MOD ]; do
+sleep 1
+done
+
+exec 1>/cache/random.log 2>&1
+
+echo ""
+echo "Random Tweak Status :"
+echo ""
+echo "Testing urandom with 10MB test..."
+busybox time busybox head -c 10m /dev/urandom > /dev/null
+echo "Testing urandom with 20MB test..."
+busybox time busybox head -c 20m /dev/urandom > /dev/null
+echo ""
+
+while [ ! -f /cache/random.log ]; do
+sleep 1
+done
+
+echo $(busybox cat /cache/random.log) >> /cache/crossbreeder.log
+rm -f /cache/random.log
+echo "" >> /cache/crossbreeder.log
+
+fi
+
+if [ "$(getprop persist.crossbreeder.rdm)" = "1" ]|[ "$(getprop persist.crossbreeder.ent)" = "1" ]; then
+
+while [ ! -f /dev/random.MOD ] || [ ! -f /dev/CB_RunHaveged.RUN ] || [ ! -f /data/haveged.pid ]; do
+sleep 1
+done
+
+exec 1>/cache/haveged.log 2>&1
+
+echo ""
+echo "Entropy Tweak Status :"
+echo ""
+echo $(for i in [1 2 3 4 5 6 7 8 9 10]; do cat /proc/sys/kernel/random/entropy_avail; sleep 1; done)
+echo $(stat /proc/sys/kernel/random/read_wakeup_threshold)
+
+while [ ! -f /cache/haveged.log ]; do
+sleep 1
+done
+
+echo $(busybox cat /cache/haveged.log) >> /cache/crossbreeder.log
+rm -f /cache/haveged.log
+echo "" >> /cache/crossbreeder.log
+
+fi
