@@ -1,6 +1,6 @@
 #!/system/bin/sh
-
-#CPU
+chmod 0777 /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+chmod 0777 /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
 echo'2100000 1300000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo'2000000 1262500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo'1900000 1175000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
