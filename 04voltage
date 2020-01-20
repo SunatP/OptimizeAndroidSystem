@@ -1,0 +1,40 @@
+#!/system/bin/sh
+busybox mount -o remount,rw -t auto /system
+busybox mount -o remount,rw -t auto /sys
+busybox mount -o remount,rw -t auto /data
+
+chmod 0777 /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+chmod 0777 /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+
+echo '1900000 1212500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1800000 1175000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1700000 1137500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1600000 1087500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1500000 1050000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1400000 1025000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1300000 975000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1200000 975000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1100000 950000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '1000000 925000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '900000 925000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '800000 950000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '700000 925000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '600000 900000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '500000 900000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo '400000 900000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+
+echo '1400000 1100000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '1300000 1125000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '1200000 1075000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '1100000 1037500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '1000000 1000000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '900000 937500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '800000 912500' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '700000 875000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '600000 850000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '500000 825000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+echo '400000 800000' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
+
+
+echo "Under Voltage by @SNP" >> /data/UVCPU.log
+echo "executed on $(date +"%d-%m-%Y %r" )"
