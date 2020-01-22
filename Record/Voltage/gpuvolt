@@ -1,0 +1,11 @@
+#!/system/bin/sh
+
+echo 730 1112500 > /sys/devices/14ac0000.mali/volt_table
+echo 700 1075000 > /sys/devices/14ac0000.mali/volt_table
+echo 600 975000 > /sys/devices/14ac0000.mali/volt_table
+echo 550 925000 > /sys/devices/14ac0000.mali/volt_table
+echo 500 900000 > /sys/devices/14ac0000.mali/volt_table
+echo 420 875000 > /sys/devices/14ac0000.mali/volt_table
+echo 350 850000 > /sys/devices/14ac0000.mali/volt_table
+echo 266 825000 > /sys/devices/14ac0000.mali/volt_table
+echo 160 812500 > /sys/devices/14ac0000.mali/volt_table

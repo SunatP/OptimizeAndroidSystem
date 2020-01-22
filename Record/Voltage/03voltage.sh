@@ -12,7 +12,7 @@ echo 1300000 1025000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo 1200000 1000000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo 1100000 975000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo 1000000 950000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
-echo 900000 950000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
+echo 900000 950000 > /sys/devices/system/c4pu/cpufreq/mp-cpufreq/cpu_volt_table
 echo 800000 925000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo 700000 900000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 echo 600000 875000 > /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table

@@ -98,3 +98,15 @@ root@treltexx:/sys/devices/system/cpu/cpufreq/mp-cpufreq # cat cpu_volt_table
 root@treltexx:/sys/devices/system/cpu/cpufreq/mp-cpufreq #
 
 ```
+
+how to get the temperature from android CPU & battery
+
+```bash
+# use su it will change $ to # then 
+cat /sys/class/thermal/thermal_zone0/temp
+cat /sys/class/thermal/thermal_zone1/temp
+# it will get temperature in abnormal form you need to divide with 1000
+acpi # for get battery result in percentage form
+apci -V # get more detailed
+
+```
