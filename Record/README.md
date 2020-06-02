@@ -32,7 +32,10 @@
 	Knox Count Warranty : 1 (Tripped)
 ```
 
-### Interactive governor from Suemax keernel 
+In the present, I changed the stock rom to AEX Android 9.0 with Magisk 20.4 (Linux version 3.10.9+ (triplr@triplr-server.localdomain) (gcc version 4.9.x 20150123 (prerelease) (GCC) ) #1 SMP PREEMPT Sat Apr 25 23:04:52 PDT 2020)
+
+
+### Interactive governor from Suemax kernel 
 
 ```
 	Updated ramdisks to N910CXXS2DPL8 & N910UXXS2DPL1
@@ -127,11 +130,12 @@ target_loads : 80 1000000:81 1400000:87 1700000:90 # 80 is mean if load below 80
 	KSM : disable impact for cpu
 	sleep between scans 0ms
 ```
-
+## Low Memory Killer
 ```
 	LMK 56 84 113 141 169 197
 ```
 
+## Virtual Memory
 ```
 	VM
 	dirty_ratio 0 
@@ -150,4 +154,9 @@ target_loads : 80 1000000:81 1400000:87 1700000:90 # 80 is mean if load below 80
 
 ```
 	Entropy 320 320
+```
+
+## Grep battery level from adb shell command
+```bash
+su -c dumpsys battery | grep level
 ```
