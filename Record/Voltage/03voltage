@@ -1,4 +1,5 @@
 #!/system/bin/sh
+
 chmod 0644 /sys/devices/system/cpu/cpufreq/mp-cpufreq/cpu_volt_table
 chmod 0644 /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table
 
