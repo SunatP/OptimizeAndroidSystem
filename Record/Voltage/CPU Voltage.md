@@ -1,5 +1,7 @@
 # Under Voltage by using Init.d
 
+CPU is undervolt for -25 mV by default
+
 ```bash
 cpucl1voltage: echo'clock voltage(mV)' > /sys/devices/system/cpu/cpufreq/mp-cpufreq/kfc_volt_table # Little
 
