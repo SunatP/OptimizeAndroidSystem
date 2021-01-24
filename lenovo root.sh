@@ -1,0 +1,1 @@
+mkdir /vendor && mount /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/preload /vendor
